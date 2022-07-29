@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pedra Papel Tesoura</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Pedra Papel Tesoura
+        </h1>
+        <div class="bloco">
+            <div class="label bg-green">USER</div>
+            <div class="label bg-red">PC</div>
+            <div id="contador" class="placar">
+                0:0
+            </div>
+        </div>
+        <div class="bloco bg-grey selected-image">
+            <div id="user">
+                <img src="assets/images/rock.png">
+            </div>
+            <div id="pc" class="reverse"></div>
+        </div>
+        <h2>Escolha seu movimento</h2>
+        <div class="buttons">
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="rock" checked>
+                <button class="btn"><img src="assets/images/rock.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="paper">
+                <button class="btn"><img src="assets/images/paper.png"></button>
+            </label>
+            <label>
+                <input type="radio" onclick="reset()" name="play" value="scissor">
+                <button class="btn"><img src="assets/images/scissor.png"></button>
+            </label>
+        </div>
+        <div class="bloco">
+            <button id="playing" class="btn-play">Jogar</button>
+        </div>
+    </div>
+    <div id="winner" class="container end-screen none">
+        <span>🏆🏆🏆</span>
+        <h3>Você Ganhou!</h3>
+        <button onclick="newGame()">Jogar Novamente</button>
+    </div>
+    <div id="loser" class="container end-screen none">
+        <h3>Você Perdeu!</h3>
+        <button onclick="newGame()">Jogar Novamente</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
